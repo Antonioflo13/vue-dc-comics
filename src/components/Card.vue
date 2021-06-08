@@ -19,7 +19,7 @@ export default {
         img {
             width: 150px;
             height: 200px;
-            object-fit: cover;
+            object-fit: initial;
             object-position: center;
         }
         p {
