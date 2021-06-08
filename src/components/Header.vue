@@ -80,8 +80,8 @@ export default {
 <style lang="scss" scoped>
     .wrapper {
     width: 80%;
-    padding: 10px;
     margin: auto;
+    padding: 10px 0;
     }
     nav {
         display: flex;
@@ -101,11 +101,19 @@ export default {
         align-items: flex-end;
         align-items: center;
         list-style: none;
+        li {
+            padding: 0 10px;
+        }
         li a {
+            font-size: 12px;
             text-decoration: none;
             text-transform: uppercase;
-            padding: 10px;
+            padding: 25px 0;
             color: black;
+        }
+        & a:hover {
+            color: #0282F9;
+            border-bottom: 3px solid #0282F9;
         }
     }
 </style>

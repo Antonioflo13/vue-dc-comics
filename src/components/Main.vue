@@ -1,9 +1,17 @@
 <template>
     <main>
-        <section class="wrapper">
-            <article>
-                <h2> --> Content goes here </h2>
-            </article>
+        <section class="jumbotron">
+        </section>
+        <section class="main-container">
+        <div class="wrapper">
+            <div class="sticker">CURRENT SERIES</div>
+            <div class="item-container">
+                <Card :comics="comic" v-for="(comic,index) in comics" :key="index"/>
+            </div>
+            <div class="button">
+                <a href="#">LOAD MORE</a>
+            </div>
+        </div>
         </section>
         <section class="shop">
             <div class="wrapper shop-item">
@@ -33,46 +41,87 @@
 </template>
 
 <script>
+import Card from '../components/Card';
+import comics from '../data/dc-comics.json';
 export default {
     name: 'Main',
+    components: {
+    Card
+  },
+  data () {
+    return {
+      comics,
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
     .wrapper {
     width: 80%;
-    padding: 10px;
+    padding: 30px 20px;
     margin: auto;
     }
-    main {
-        width: 100%;
-        height: 200px;
+    .jumbotron {
+        height: 300px;
         color: white;
-        background-color: #1D1D1D;
-        .shop {
+        background-image: url(../assets/img/jumbotron.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .main-container {
+        position: relative;
+        background-color: black;
+    }
+    .sticker {
+        position: absolute;
+        top: -20px;
+        font-weight: bold;
+        padding: 10px 10px;
+        color: white;
+        background-color: #0282F9;
+    }
+    .item-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0px;
+    }
+        .button {
+            display: flex;
+            justify-content: center;
+            a {
+            padding: 10px 80px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background-color: #0282F9;
+            }
+        }
+    .shop {
+        display: flex;
+        align-items: center;
+        width: 100%; 
+        background-color: #0282F9;
+        article {
             display: flex;
             align-items: center;
-            width: 100%;
-            height: 100px;   
-            background-color: #0282F9;
-            article {
-                display: flex;
-                justify-content: space-between;
-                img {
-                    margin-right: 15px;
-                }
-                p {
-                    font-size: 12px;
-                    text-transform: uppercase;
-                }
-            }
+            padding: 10px 0 10px 0;
+            cursor: pointer;
             img {
-                height: 50px;
+                margin-right: 15px;
             }
-            .shop-item {
-                display: flex;
-                justify-content: space-between;
+            p {
+                font-size: 12px;
+                text-transform: uppercase;
+                color: white;
             }
+        }
+        img {
+            height: 50px;
+        }
+        .shop-item {
+            display: flex;
+            justify-content: space-between;
         }
     }
 </style>
