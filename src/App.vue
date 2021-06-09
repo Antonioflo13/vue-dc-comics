@@ -22,13 +22,5 @@ export default {
 </script>
 
 <style lang="scss">
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
+  @import './style/general.scss'
 </style>

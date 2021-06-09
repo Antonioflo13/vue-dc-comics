@@ -57,6 +57,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variables.scss';
     .wrapper {
     width: 80%;
     padding: 30px 20px;
@@ -79,7 +80,7 @@ export default {
         font-weight: bold;
         padding: 10px 10px;
         color: white;
-        background-color: #0282F9;
+        background-color: $background-text-lightblue;
     }
     .item-container {
         display: flex;
@@ -94,14 +95,14 @@ export default {
             font-weight: bold;
             text-decoration: none;
             color: white;
-            background-color: #0282F9;
+            background-color: $background-text-lightblue;
             }
         }
     .shop {
         display: flex;
         align-items: center;
         width: 100%; 
-        background-color: #0282F9;
+        background-color: $background-text-lightblue;
         article {
             display: flex;
             align-items: center;

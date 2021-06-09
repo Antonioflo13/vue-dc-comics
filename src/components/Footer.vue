@@ -190,6 +190,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variables.scss';
     .bg-wrapper {
     width: 80%;
     padding: 15px 10px 15px 10px;
@@ -216,21 +217,21 @@ export default {
         }
         a {
             text-decoration: none;
-            color: #7d7e79;
+            color: $text-footer-grey;
         }
         a:hover {
-            color: #0282F9;
+            color: $background-text-lightblue;
         }
         ul li:first-child {
             padding: 10px 0 15px 0;
             h3 {
                 text-transform: uppercase;
-                color: white;
+                color: $textcolorwhite;
             }
         }
     }
     .footer-banner {
-        background-color: #303030;
+        background-color: $background-darkgrey;
         .wrapper-footer-banner {
             display: flex;
             justify-content: space-between;
@@ -241,14 +242,14 @@ export default {
         }
         .btn {
             padding: 12px 12px;
-            border: 1px solid #0282F9;
+            border: 1px solid $background-text-lightblue;
             color: white;
             text-transform: uppercase;
             background-color: #303030;
             cursor: pointer;
         }
         .btn:hover {
-            background-color: #0282F9;
+            background-color: $background-text-lightblue;
         }
     }
     .nav-right {
@@ -258,7 +259,7 @@ export default {
         h3 {
             margin-right: 15px;
             text-transform: uppercase;
-            color: #0282F9;
+            color: $background-text-lightblue;
         }
         ul li {
             list-style: none;
